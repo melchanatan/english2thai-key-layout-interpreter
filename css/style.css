@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(29, 29, 29);
+}
+
+.translator {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    width: 50vw;
+    right: 50%;
+    transform: translate(50%, 50%);
+    
+    color: white;
+}
+
+h1 {
+    padding: 3rem 2rem;
+    font-size: 2.5rem;
+
+    font-weight: 900;
+    background-image: linear-gradient(to right bottom, rgb(62, 100, 226), rgb(219, 224, 253));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.input {
+    width: 80%;
+    height: 2rem;
+
+    font-family: inherit;
+    padding: 0 1rem;
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+    transition: all .2s;
+}
+
+.input:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(219, 224, 253, 0.2);
+}
+
+.btn-go {
+    height: 2rem;
+    width: 10%;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    border-radius: 0 1rem 1rem 0;
+    font-family: inherit;
+    font-weight: 700;
+    color: rgb(44, 44, 44);
+    border: none;
+    background-color: rgb(177, 188, 248);
+    transition: all .2s;
+
+}
+
+.btn-go:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(219, 224, 253, 0.2);
+    background-color: rgb(92, 138, 238);
+    color: #eee;
+}
+
+.output {
+    font-family: "Prompt", sans-serif;
+    font-size: 1.4rem;
+}
