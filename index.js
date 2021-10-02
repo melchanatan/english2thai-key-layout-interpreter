@@ -3,18 +3,32 @@ $.getJSON("./translation_key.json", function(json) {
     keys = json;
 });
 
-$(".btn-go").click(function(){
+$(".btn-go").click( function(){
+    let outputPath = $(".output");
     let string = $(".input").val();
-    let new_string = "" 
+    let newString = "" ;
     for (const c in string) {
         if (keys[string[c]]) {
-            new_string += keys[string[c]]
+            newString += keys[string[c]];
         }
         else {
-            new_string += "_"
+            newString += "_";
         }
     }
 
-    console.log(new_string);
-    $(".output").text(new_string);
+    outputPath.addClass("animation");
+
+    outputPath.text(newString);
+
+    outputPath.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+        $(this).removeClass("animation");
+   });
 });
+
+$(".input").keyup(function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        $(".btn-go").trigger("click");
+    }
+});
+
