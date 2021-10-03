@@ -24,7 +24,7 @@ body {
 
 h1 {
     padding: 3rem 2rem;
-    padding-top: 10rem;
+    padding-top: 20vh;
     font-size: 2.5rem;
 
     font-weight: 900;
@@ -99,32 +99,40 @@ h1 {
 
 
 /* 730px */
-@media only screen and (max-width: 45.625em) { 
+@media only screen and (max-width: 75em) { 
     html {
         font-size: 75%;
     }
-}
-
-/* phone (600px)*/
-@media only screen and (max-width: 37.5em) { 
 
     .translator {
         width: 80%;   
     }
+
+}
+
+/* phone (600px)*/
+@media only screen and (max-width: 37.5em) { 
 
     .input {
         display: flex;
         border-radius: 1rem;
         width: 100%;
     }
-
-    .input:focus {
-        transform: translateY(0);
-    }
     
     .btn-go {
         margin-top: 2rem;
         width: 20%;
         border-radius: 1rem;
+    }
+}
+
+@media only screen and (hover: none) {
+
+    .input:focus {
+        transform: translateY(0);
+    }
+
+    .btn-go:hover {
+        transform: translateY(0);
     }
 }
