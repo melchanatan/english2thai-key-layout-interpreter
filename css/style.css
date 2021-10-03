@@ -117,6 +117,10 @@ h1 {
         border-radius: 1rem;
         width: 100%;
     }
+
+    .input:focus {
+        transform: translateY(0);
+    }
     
     .btn-go {
         margin-top: 2rem;
