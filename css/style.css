@@ -1,3 +1,4 @@
+
 *,
 *::after,
 *::before {
@@ -8,25 +9,22 @@
 
 body {
     box-sizing: border-box;
-    position: relative;
-
+    display: flex;
+    justify-content: center;
     font-family: "Roboto", sans-serif;
     background-color: rgb(29, 29, 29);
 }
 
 .translator {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    width: 50vw;
-    right: 50%;
-    transform: translate(50%, 50%);
-    
+    width: 60%;
+
     color: white;
 }
 
 h1 {
     padding: 3rem 2rem;
+    padding-top: 10rem;
     font-size: 2.5rem;
 
     font-weight: 900;
@@ -65,7 +63,6 @@ h1 {
     border: none;
     background-color: rgb(177, 188, 248);
     transition: all .2s;
-
 }
 
 .btn-go:hover {
@@ -97,5 +94,33 @@ h1 {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* 730px */
+@media only screen and (max-width: 45.625em) { 
+    html {
+        font-size: 75%;
+    }
+}
+
+/* phone (600px)*/
+@media only screen and (max-width: 37.5em) { 
+
+    .translator {
+        width: 80%;   
+    }
+
+    .input {
+        display: flex;
+        border-radius: 1rem;
+        width: 100%;
+    }
+    
+    .btn-go {
+        margin-top: 2rem;
+        width: 20%;
+        border-radius: 1rem;
     }
 }
